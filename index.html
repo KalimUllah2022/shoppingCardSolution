@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Shopping Cart</title>
@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/product-1.png" type="image/x-icon">
 </head>
 
 <body>
@@ -19,18 +20,18 @@
                 <div class="col-md-12 col-lg-10 mx-auto">
                     <div class="cart-item">
                         <div class="row">
-                            <div class="col-md-7 center-item">
+                            <div class="col-md-7 center-item mx-auto">
                                 <img src="images/product-1.png" alt="">
                                 <h5>iPhone 11 128GB Black</h5>
                             </div>
-
                             <div class="col-md-5 center-item">
                                 <div class="input-group number-spinner">
-                                    <button type="button" class="btn btn-default"><i class="fas fa-minus"></i></button>
-                                    <input type="number" min="0" class="form-control text-center" value="1">
-                                    <button type="button" class="btn btn-default"><i class="fas fa-plus"></i></button>
+                                    <button id="phoneMinus" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                                    <input id="phoneNumber" type="number" min="0" class="form-control text-center" value="1">
+                                    <button id="phonePlus" class="btn btn-default"><i class="fas fa-plus"></i></button>
+
                                 </div>
-                                <h5>$1219</h5>
+                                <h5>$<span id="phoneTotal">1219</span></h5>
                                 <img src="images/remove.png" alt="" class="remove-item">
                             </div>
                         </div>
@@ -44,12 +45,12 @@
                             </div>
                             <div class="col-md-5 center-item">
                                 <div class="input-group number-spinner">
-                                    <button class="btn btn-default"><i class="fas fa-minus"></i></button>
-                                    <input type="number" min="0" class="form-control text-center" value="1">
-                                    <button class="btn btn-default"><i class="fas fa-plus"></i></button>
+                                    <button id="caseMinus" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                                    <input id="caseNumber" type="number" min="0" class="form-control text-center" value="1">
+                                    <button id="casePlus" class="btn btn-default"><i class="fas fa-plus"></i></button>
 
                                 </div>
-                                <h5>$59</h5>
+                                <h5>$<span id="caseTotal">59</span></h5>
                                 <img src="images/remove.png" alt="" class="remove-item">
                             </div>
                         </div>
@@ -65,9 +66,9 @@
                             </div>
 
                             <div class="col-md-4 status">
-                                <h5>$1,278</h5>
-                                <h5>$0</h5>
-                                <h5>$1,278</h5>
+                                <h5>$<span id="sub-total">1278</span></h5>
+                                <h5>$<span id="tex-amount">0</span></h5>
+                                <h5>$<span id="total-price">1278</span></h5>
                             </div>
                         </div>
                     </div>
@@ -78,6 +79,7 @@
             </div>
         </div>
     </section>
+    <script src="app.js"></script>
 </body>
 
 </html>
